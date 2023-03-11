@@ -1,0 +1,7 @@
+set $mod Mod4
+
+floating_modifier $mod
+bindsym $mod+Return exec kitty
+
+gaps inner 5
+gaps outer 0
