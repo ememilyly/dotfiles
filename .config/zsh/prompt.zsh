@@ -1,4 +1,1 @@
-#blue=117
-#pink=218
-#white=231
-#PROMPT="%F{$blue}e%F{$pink}m%F{$white}i%F{$pink}l%F{$blue}y %{\$reset_color%}%1~ > "
+PROMPT="%F{218}%n%{\$reset_color%}@%F{117}%m %F{15}%1~ > "

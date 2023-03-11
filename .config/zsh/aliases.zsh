@@ -1,6 +1,12 @@
-alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias ll='ls -lh --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias la='ls -lha --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+if command -v gls &> /dev/null; then
+    # use gnu ls on mac
+    ls="gls"
+else
+    ls="ls"
+fi
+alias ls=$ls' --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias ll=$ls' -lh --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias la=$ls' -lha --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias rm='rm -I'
 
 alias grep='grep --color=auto'
