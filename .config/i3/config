@@ -75,7 +75,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+v split toggle
+#bindsym $mod+v split toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -151,7 +151,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # colours
 # class                 border		bground		text	indicator	child_border
-client.focused         	#F4AA5C 	#CB873D 	#FFFFFF #2E9EF4   	#F4AA5C 
+client.focused         	#fdc8c6 	#c78585 	#FFFFFF #2E9EF4   	#fdc8c6 
 
 set $mode_system System (l) lock, (r) reboot, (s) shutdown
 mode "$mode_system" {
@@ -210,7 +210,7 @@ bar {
 #	output DP-2
 
 	colors {
-		focused_workspace  #F4AA5C #CB873D #FFFFFF
+		focused_workspace  #fdc8c6 #fdc8c6 #ffffff
 	}
 
 }

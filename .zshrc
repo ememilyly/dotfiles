@@ -10,7 +10,7 @@ bindkey "\e[1;5C" forward-word
 bindkey "\e[1;5D" backward-word
 bindkey "\e[3~" delete-char
 
-#If not running interactively, don't do anything
+# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 # Open tmux
@@ -35,3 +35,8 @@ export LS_COLORS
 for file in $(find $HOME/.config/zsh -name *.zsh); do
     source "$file"
 done
+
+# Start X if available and not running
+if command -v xset &> /dev/null && ! xset -q &> /dev/null; then
+    startx
+fi
