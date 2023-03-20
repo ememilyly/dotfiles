@@ -35,8 +35,3 @@ export LS_COLORS
 for file in $(find $HOME/.config/zsh -name *.zsh); do
     source "$file"
 done
-
-# Start X if available and not running
-if command -v xset &> /dev/null && ! xset -q &> /dev/null; then
-    startx
-fi
