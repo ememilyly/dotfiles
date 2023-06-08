@@ -1,0 +1,29 @@
+[delta "cassiopea"]
+    # author: https://github.com/ememilyly
+    dark = true
+    file-style = magenta
+    file-decoration-style = none
+    file-added-label = [+]
+    file-copied-label = [C]
+    file-modified-label = [M]
+    file-removed-label = [-]
+    file-renamed-label = [R]
+    hunk-header-style = omit
+    line-numbers = true
+    line-numbers-left-style = 1
+    line-numbers-left-format = "{nm:>1} "
+    line-numbers-minus-style = red
+    line-numbers-right-style = 2
+    line-numbers-right-format = "{np:>1}  "
+    line-numbers-plus-style = green
+    minus-emph-style = bold red 52
+    minus-empty-line-marker-style = normal "#3f0001"
+    minus-non-emph-style = dim red
+    minus-style = bold red
+    plus-emph-style = bold green 22
+    plus-empty-line-marker-style = normal "#002800"
+    plus-non-emph-style = dim green
+    plus-style = bold green
+    syntax-theme = OneHalfDark
+    whitespace-error-style = reverse red
+    zero-style = dim syntax

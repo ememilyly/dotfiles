@@ -1,13 +1,21 @@
-# Enable Zsh command highlighting
-source_file="zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-if [[ -f "$HOME/.local/share/$source_file" ]]; then
-    source "$HOME/.local/share/$source_file"
-elif [[ -f "/usr/local/share/$source_file" ]]; then
-    source "/usr/local/share/$source_file"
-elif [[ -f "/usr/share/$source_file" ]]; then
-    source "/usr/share/$source_file"
-elif [[ -f "/usr/share/zsh/plugins/$source_file" ]]; then
-    source "/usr/share/zsh/plugins/$source_file"
-else
-    echo "Can't find zsh-syntax-highlighting.zsh"
-fi
+# keep your eye on the ball
+ball="zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+cups=(
+    "$HOME/.local/share"
+    "/usr/local/share"
+    "/usr/share"
+    "/usr/share/zsh/plugins"
+    "/opt/homebrew/share"
+)
+
+# i hope you were paying attention
+for cup in $cups; do
+    if [[ -f "${cup}/${ball}" ]]; then
+        source "${cup}/${ball}"
+        found="hooray!"
+        break
+    fi
+done
+
+# oof
+[[ -z $found ]] && echo "Can't find zsh-syntax-highlighting.zsh"

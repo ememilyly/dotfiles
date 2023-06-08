@@ -1,0 +1,27 @@
+[user]
+    name = emily
+    email = git@emily.ly
+
+[includeIf "gitdir:~/code/work/"]
+    path = ~/code/work/.gitconfig
+
+[alias]
+    br = "! git for-each-ref --sort=committerdate refs/heads/  --format='%(HEAD)  \
+  %(color:red)%(objectname:short)%(color:reset);\
+  %(color:yellow)%(refname:short)%(color:reset);\
+  (%(color:green)%(committerdate:relative)%(color:reset));\
+      %(authorname);%(contents:subject)' | column -t -s ';'"
+    brr = "! git for-each-ref --sort=committerdate refs/remotes/  --format='%(HEAD)  \
+  %(color:red)%(objectname:short)%(color:reset);\
+  %(color:yellow)%(refname:short)%(color:reset);\
+  (%(color:green)%(committerdate:relative)%(color:reset));\
+      %(authorname);%(contents:subject)' | column -t -s ';'"
+
+[init]
+	defaultBranch = main
+
+[push]
+	autoSetupRemote = true
+
+[include]
+    path = ~/.config/git/delta.gitconfig

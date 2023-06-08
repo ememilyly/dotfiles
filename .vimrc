@@ -13,20 +13,23 @@ filetype indent plugin on
 
 " Per file settings
 set modeline
+set modelines=2
 
 set ruler
 
 " Close all other buffers
 map <leader>c :%bd\|e#<cr>
 
-"call pathogen#infect()
+" Create new tab and open cwd
+nnoremap <silent> gn :tabnew\|e.<cr>
 
 call plug#begin()
 
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'rodjek/vim-puppet'
 Plug 'davidhalter/jedi-vim'
-
+Plug 'pprovost/vim-ps1'
 Plug 'ervandew/supertab'
-
 Plug 'dense-analysis/ale'
 let g:ale_fixers = ['black']
 " Python
@@ -34,6 +37,9 @@ let g:ale_fixers = ['black']
 " Puppet
 " gem install puppet-lint
 
-Plug 'pprovost/vim-ps1'
-
 call plug#end()
+
+" colorscheme after plug
+" Don't change my bg colour >:(
+autocmd ColorScheme * highlight Normal ctermbg=None
+colorscheme onehalfdark
